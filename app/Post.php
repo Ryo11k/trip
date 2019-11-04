@@ -26,8 +26,12 @@ class Post extends Model
      public function likes() {
        return $this->hasMany('App\Like');
      }
-     
+
      public function like_by() {
        return Like::where('user_id', Auth::user()->id)->first();
+     }
+
+     public function like() {
+       return $this->likes()->where('user_id', Auth::user()->id)->first();
      }
    }

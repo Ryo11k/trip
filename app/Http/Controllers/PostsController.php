@@ -14,6 +14,7 @@ class PostsController extends Controller
   public function index() {
     // DBよりPostテーブルの投稿を作成日時の降順を取得
     $posts=Post::orderBy('created_at','desc')->paginate(10);
+    
     // 取得した値をビュー「posts/index」に渡す,
     //compact('posts')は['posts'=>$posts]と同じ,view関数は第一引数にビューの名前、第二引数にビューに渡したい値
     return view('posts.index',compact('posts'));
