@@ -1,0 +1,101 @@
+
+.btn-primary2 {
+  color:#fff;
+  background-color:#3490dc;
+  border-color:#3490dc;
+  float:right;
+  margin-right:15px;
+}
+
+.wrapper li {
+  list-style:none;
+  display:flex;
+  margin-top:50px;
+  margin-left:205px;
+  margin-right:180px;
+}
+
+.top-wrapper {
+  font-size:40px;
+  text-align:center;
+}
+
+.wrapper {
+  font-size:22px;
+  display:flex;
+}
+
+.fa-thumbs-up {
+  /*color:#A4C639;*/
+  margin-right:7px;
+}
+
+.fa-pen-square {
+  margin-right:7px;
+}
+
+.fa-user-circle {
+  margin-right:7px;
+}
+
+.fa-list-alt {
+  margin-right:7px;
+}
+
+.fa-search {
+  margin-right:7px;
+}
+
+.fa-comment {
+  margin-right:7px;
+}
+
+body,#slider{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.slide {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 500px;
+}
+
+.slide1 {
+    background-image: ("{{ URL::asset('assets/img/portfolio.png }}");
+}
+
+.slide2 {
+    background-image: url(image2.jpg);
+}
+
+.slide3 {
+    background-image: url(image3.jpg);
+}
+
+.btn-follow {
+  padding-left:50px;
+}
+
+#pimg {
+  width:100%;
+}
+#pimg ul {
+  list-style:none;
+  padding:0;
+  margin:0;
+  text-align:center;
+}
+#pimg ul li {
+  display:inline-block;
+  width:30px;
+  height:30px;
+  border:1px solid #d8d8d8;
+}
+
+#log {
+  font-size: 60px;
+}
