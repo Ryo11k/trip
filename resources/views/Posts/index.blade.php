@@ -53,12 +53,3 @@
   <div class="d-flex justify-content-center mb-5">{{ $posts->links() }}</div>
 </div>
 @endsection
-
-<!--<div id="arrow-left" class="arrow"></div>
-    <div id="arrow-right" class="arrow"></div>
-
-    <div id="slider">
-        <div class="slide slide1"></div>
-        <div class="slide slide2"></div>
-        <div class="slide slide3"></div>
-    </div>
