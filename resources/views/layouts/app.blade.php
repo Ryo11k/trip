@@ -68,6 +68,7 @@
            @endguest
          </ul>
          <a class="btn btn-follow" href="{{ route('users') }}"><i class="fas fa-users"></i></a>
+         <i class="fas fa-ellipsis-h"></i>
        </div>
      </div>
    </nav>

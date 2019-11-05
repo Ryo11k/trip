@@ -13,4 +13,10 @@ class PagesController extends Controller
     public function create() {
       return view('pages.create');
     }
+
+    /*public function show() {
+      $post = Post::findOrFail($post_id);
+      $like = $post->likes()->where('user_id', Auth::user()->id)->first();
+      return view('pages.show')->with(array('post' => $post, 'like' => $like));
+    }*/
 }
