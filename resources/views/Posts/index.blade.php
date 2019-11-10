@@ -22,7 +22,7 @@
     </div>
 
     <div class="card-footer">
-      @if (Auth::check())
+      <!-- @if (Auth::check())
       @if ($post->like())
       {{ Form::model($post, array('action' => array('LikesController@destroy', $post->id, $post->like()))) }}
       <button type="submit">
@@ -38,7 +38,7 @@
       </button>
       {!! Form::close() !!}
       @endif
-      @endif
+      @endif-->
 
       <span class="mr-2">{{ $post->created_at->format('Y.m.d') }}</span>
       <a class="card-link" href="{{ route('posts.show', ['post' => $post]) }}"><i class="far fa-comment"></i></a>
