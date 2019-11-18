@@ -33,6 +33,8 @@ Route::get('/', 'PagesController@index');
 
 Route::post('/posts/{post}/likes', 'LikesController@store');
 Route::post('/posts/{post}/likes/{like}', 'LikesController@destroy');
+Route::post('/posts/{post}/likes2', 'LikesController@store2');
+Route::post('/posts/{post}/likes2/{like}', 'LikesController@destroy2');
 
 Route::group(['middleware' => 'auth'], function () {
     Route::get('users', 'UserController@index')->name('users');

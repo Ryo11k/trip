@@ -32,11 +32,12 @@ class PostsController extends Controller
     DB::beginTransaction();
     try{
       $post = new Post;
+      $post->user_id = Auth::user()->id;
       $post->title = $request->title;
       $post->body = $request->body;
       if($request->hasFile('file')) {
         $post->photo = date('YmdHis').$request->file('file')->getClientOriginalName();//画像ファイルのファイル名
-        $request->file('file')->storeAs('test', $post->photo);
+        $request->file('file')->storeAs('public', $post->photo);
       }
       $post->save();
       DB::commit();
