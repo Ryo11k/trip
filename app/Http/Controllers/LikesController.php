@@ -22,14 +22,35 @@ class LikesController extends Controller
     );
     $post = Post::findOrFail($postId);
 
-    return redirect()->action('PostsController@show', $post->id);
-        }
+    return redirect()->action('PostsController@index');
+  }
 
   public function destroy($postId, $likeId)
   {
     $post = Post::findOrFail($postId);
     $post->like_by()->findOrFail($likeId)->delete();
 
+    return redirect()->action('PostsController@index');
+  }
+
+  public function store2(Request $request, $postId)
+  {
+    Like::create(
+      array(
+        'user_id' => Auth::user()->id,
+        'post_id' => $postId
+      )
+    );
+    $post = Post::findOrFail($postId);
+
     return redirect()->action('PostsController@show', $post->id);
+  }
+
+  public function destroy2($postId, $likeId)
+  {
+    $post = Post::findOrFail($postId);
+    $post->like_by()->findOrFail($likeId)->delete();
+
+    return redirect()->action('PostsController@show',$post->id);
   }
 }

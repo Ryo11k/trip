@@ -19,6 +19,14 @@
         @endif
       </div>
 
+      <!--<div class="mb-4 text-right">
+        <a class="btn btn-primary" href="{{ route('posts.edit', ['post' => $post]) }}">編集する</a>
+        <form style="display: inline-block;" method="POST" action="{{ route('posts.destroy', ['post' => $post]) }}">
+          @csrf
+          @method('DELETE')<button class="btn btn-danger">削除する</button>
+        </form>
+      </div>-->
+
       <div class="mt-4">
         <button type="submit" class="btn btn-primary"><i class="far fa-comment"></i>コメントする</button>
         <a class="btn btn-primary" href="{{ route('top') }}">投稿を見る</a>
@@ -39,14 +47,14 @@
 
     @if (Auth::check())
     @if ($like)
-    {{ Form::model($post, array('action' => array('LikesController@destroy', $post->id, $like->id))) }}
+    {{ Form::model($post, array('action' => array('LikesController@destroy2', $post->id, $like->id))) }}
     <button type="submit">
       <i class="far fa-thumbs-up"></i>
       Like {{ $post->likes_count }}
     </button>
     {!! Form::close() !!}
     @else
-    {{ Form::model($post, array('action' => array('LikesController@store', $post->id))) }}
+    {{ Form::model($post, array('action' => array('LikesController@store2', $post->id))) }}
     <button type="submit">
       <i class="far fa-thumbs-up"></i>
       Like {{ $post->likes_count }}
